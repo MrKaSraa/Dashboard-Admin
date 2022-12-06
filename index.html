@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Apple Shop</title>
+    <link rel="icon" href="./images/icons8-apple-logo-40.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <script
+      nonce="undefined"
+      src="https://cdn.zingchart.com/zingchart.min.js"
+    ></script>
+    <link rel="stylesheet" href="./styles/icons/all.css" type="text/css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./styles/js framework/iziToast.min.css" />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">   -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <!-- <div class="loader">
+        <img src="data:image/jpeg;base64,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"  alt="Loading..." />
+      </div> -->
+
+    <div class="top-header animate__animated animate__fadeIn">
+      <main>
+        <header>
+          <ul class="ul-header">
+            <a href="#" class="a-profile-img">
+              <img
+                src="https://www.elmefarda.com/wp-content/uploads/2011/04/steve-jobs1.jpg"
+                alt=""
+              />
+            </a>
+
+            <button type="button" class="btn btn-gray position-relative mx-3">
+              <div class="fa fa-bell"></div>
+              <span
+                class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle"
+              >
+                <span class="visually-hidden">New alerts</span>
+              </span>
+            </button>
+
+            <button type="button" class="btn btn-gray position-relative">
+              <div class="fa fa-question-circle"></div>
+            </button>
+          </ul>
+
+          <div class="mx-3 text-header">
+            <p class="dashboard-text">Dashboard</p>
+            <p class="person">Steve Jobs</p>
+          </div>
+
+          <button
+            class="btn btn-outline-whitee mx-2 d-sm-none btnoffcanvas"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+          >
+            <i class="fa fa-cog"></i>
+          </button>
+
+          <div
+          style="width: 320px;"
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasRight"
+            aria-labelledby="offcanvasRightLabel"
+          >
+            <div class="offcanvas-header">
+              <div style="display: flex; align-items:center">
+                <div style=" width:40px; height:40px;margin-top: .5rem;">
+                  <img src="https://www.elmefarda.com/wp-content/uploads/2011/04/steve-jobs1.jpg" class="off-img"/>
+                </div>
+                <div class="mx-2">
+                       <p style="font-size:1.3rem;font-family:cursive;margin-bottom: 0rem;color: black;  " class="mt-4">Dashboard</p>
+                  <p  style="color: black;">Steve Jobs</p>
+                </div>
+             
+              </div>
+          
+
+              <button
+
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+
+              <div class="off-log">
+                <i class="fa fa-sign-in mx-3"></i>
+                <p style="margin-right: 1rem;" class="mt-3 "> Log Out</p>
+              </div>
+
+              <div class="section-off-body active">
+                <i class="fa fa-home fa-fw mx-3"></i>
+                <p class="mt-3">Home</p>
+              </div>
+              
+              <div class="section-off-body ">
+                <i class="fa fa-file-pdf fa-fw mx-3"></i>
+                <p class="mt-3">Files</p>
+              </div>
+              
+              <div class="section-off-body ">
+                <i class="fa fa-signal fa-fw mx-3"></i>
+                <p class="mt-3">Signals</p>
+              </div>
+              
+              <div class="section-off-body ">
+                <i class="fa fa-shopping-basket fa-fw mx-3"></i>
+                <p class="mt-3">Last Purchase</p>
+              </div>
+              
+              <div class="section-off-body ">
+                <i class="fa fa-info fa-fw mx-3"></i>
+                <p class="mt-3">Aboue us</p>
+              </div>
+              
+            
+
+             
+            </div>
+          </div>
+        </header>
+
+        <div
+          style="background-color: rgb(219, 219, 219)"
+          class="titles-section px-lg-4"
+        >
+          <p>Bills</p>
+        </div>
+
+        <div class="all-pills pb-4">
+          <div class="pills-section">
+            <div class="pills">
+              <div class="icons-pills">
+                <div class="fa fa-calendar-check fa-2x my-2"></div>
+                <div class="progress"></div>
+              </div>
+              <div class="text-pill">
+                <p class="text-gray">Ready ot assign</p>
+                <p><strong style="font-size: 1.2rem">2424 -</strong> 42</p>
+                <p class="text-gray" style="font-size: 0.8rem">This year</p>
+              </div>
+            </div>
+            <div class="pills" id="pills-2">
+              <div class="icons-pills">
+                <div class="fa fa-bookmark fa-2x my-2"></div>
+                <div class="progress2"></div>
+              </div>
+              <div class="text-pill">
+                <p class="text-gray">Pending sign offs</p>
+                <p><strong style="font-size: 1.2rem">63 -</strong> 17</p>
+                <p class="text-gray" style="font-size: 0.8rem">This year</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pills-section">
+            <div class="pills">
+              <div class="icons-pills">
+                <div class="fa fa-times-circle fa-2x my-2"></div>
+                <div class="progress3"></div>
+              </div>
+              <div class="text-pill">
+                <p class="text-gray">Declined</p>
+                <p><strong style="font-size: 1.2rem">5</strong></p>
+                <p class="text-gray" style="font-size: 0.8rem">This year</p>
+              </div>
+            </div>
+            <div class="pills" id="pills-2">
+              <div class="icons-pills">
+                <div class="fa fa-calendar fa-2x my-2"></div>
+                <div class="progress4"></div>
+              </div>
+              <div class="text-pill">
+                <p class="text-gray">RFI</p>
+                <p><strong style="font-size: 1.2rem">13 -</strong> 17</p>
+                <p class="text-gray" style="font-size: 0.8rem">This year</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="titles-section  px-lg-4"
+          style="background-color: rgb(184, 177, 169)"
+        >
+          <p>Invoices</p>
+        </div>
+        <div class="main-charts">
+          <div class="Gauge-cilents-div">
+            <div class="Gauge-chart  my-3">
+              <canvas id="chartJSContainer"></canvas>
+              <p class="Gauge-chart-p">45%</p>
+
+              <div class="guage-icon">
+                <img src="./styles/icons/icons8-apple-logo-55.png" alt="" />
+              </div>
+
+              <div class="Gauge-chart-info">
+                <p style="color: gray; font-size: 0.8rem">Account Owed</p>
+                <p style="font-size: 1.3rem">$933,333,22</p>
+                <p>$124,342,34</p>
+              </div>
+            </div>
+
+            <div class="cilents">
+              <div class="cilent my-3 mt-4">
+                <p
+                  style="
+                    margin-bottom: 0;
+                    font-weight: 700;
+                    margin-left: 1.4rem;
+                  "
+                >
+                  New cilents
+                </p>
+                <div class="cilent-info">
+                  <p
+                    style="font-weight: 700 !important; font-size: 3rem"
+                    class="mx-2"
+                  >
+                    64
+                  </p>
+                  <span class="cilent-span">+ 18.7%</span>
+                </div>
+              </div>
+
+              <div class="invoices my-3">
+                <p
+                  style="
+                    margin-bottom: 0;
+                    font-weight: 700;
+                    margin-left: 1.4rem;
+                  "
+                >
+                  invoices overdue
+                </p>
+                <div class="invoices-info">
+                  <p
+                    style="font-weight: 700 !important; font-size: 3rem"
+                    class="mx-2"
+                  >
+                    6
+                  </p>
+                  <span class="invoices-span">+ 2.7%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 3.5rem ;margin-bottom: .5rem;" class="line-chart-div">
+            <canvas id="canvas" class="chartjs-render-monitor"></canvas>
+          </div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="aside-icon my-4 mx-4">
+          <img
+            src="https://parspng.com/wp-content/uploads/2022/06/applepng.parspng.com-2-300x300.png"
+            width="50"
+            alt=""
+          />
+        </div>
+
+        <div class="clip-path">
+          <div class="aside-icons-div">
+            <div class="far fa-home fa-fw aside-icons-fa"></div>
+            <div class="far fa-sign-in fa-fw aside-icons-fa"></div>
+            <div class="fa fa-signal aside-icons-fa fa-fw"></div>
+            <div class="far fa-file-pdf aside-icons-fa fa-fw"></div>
+            <div class="far fa-info aside-icons-fa fa-fw"></div>
+          </div>
+        </div>
+
+        <div class="menu mx-3">
+          <a href="#wh">
+            <i class="fa fa-paper-plane"></i>
+          </a>
+          <a href="#info">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="#message">
+            <i class="fas fa-fax"></i>
+          </a>
+
+          <button id="toggle-btn">
+            <i class="far fa-comments"></i>
+          </button>
+        </div>
+      </aside>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+
+    <script src="./styles/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="./styles/js framework/circle-progress.min.js"></script>
+    <script></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="./styles/js framework/iziToast.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="./styles/js framework/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      new CircleProgress(".progress", {
+        max: 100,
+        value: 60,
+        textFormat: "percent",
+      });
+
+      new CircleProgress(".progress2", {
+        max: 100,
+        value: 22,
+        textFormat: "percent",
+      });
+
+      new CircleProgress(".progress3", {
+        max: 100,
+        value: 5,
+        textFormat: "percent",
+      });
+
+      new CircleProgress(".progress4", {
+        max: 100,
+        value: 5,
+        textFormat: "percent",
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+<div id="iziToast"></div>
